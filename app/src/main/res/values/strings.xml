@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">TaskToDo</string>
+    <string name="title">Title</string>
+    <string name="createdAt">Created At</string>
+    <string name="duration">Duration</string>
+    <string name="save">SAVE</string>
+    <string name="durationSuffix">Days</string>
+    <string name="description">Description</string>
+</resources>

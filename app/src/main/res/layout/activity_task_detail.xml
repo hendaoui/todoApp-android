@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TaskDetailActivity">
+
+    <!--Title-->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/Title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:hint="@string/title"
+        android:theme="@style/editText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/titleField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!--Duration-->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/duration"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:hint="@string/duration"
+        android:theme="@style/editText"
+        app:suffixText="@string/durationSuffix"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Title">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/durationField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!--Description-->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:hint="@string/description"
+        android:theme="@style/editText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/duration">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/descriptionField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine"
+            android:lines="3"
+            android:maxLines="3"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <!--save button-->
+    <Button
+        android:id="@+id/submit"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_margin="0dp"
+        android:background="@drawable/submit_button_selector"
+        android:text="@string/save"
+        android:textColor="@color/blue"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
